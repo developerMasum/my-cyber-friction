@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: gilroy;
+}
+
+#nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 7%;
+  width: 100%;
+  position: fixed;
+  z-index: 9;
+  padding: 0px 30px;
+}
+#nav > h3 {
+  font-family: gilroy;
+  font-weight: 400;
+  font-size: 25px;
+}
+#nav > h3 > span {
+  -webkit-text-stroke: 0.8px black;
+  color: transparent;
+  font-weight: 500;
+}
+#nav > button {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 8px 8px;
+  border-radius: 50px;
+  background-color: #000;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+#nav > button:hover {
+  background-color: #444444;
+}
+#nav > button > img {
+  text-decoration: none;
+  margin-right: 0px;
+  width: 22px;
+  height: 22px;
+}
