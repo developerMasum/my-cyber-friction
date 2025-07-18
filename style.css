@@ -4,7 +4,66 @@
   box-sizing: border-box;
   font-family: gilroy;
 }
-
+@font-face {
+  font-family: gilroy;
+  src: url(./Fonts/Oswald-VariableFont_wght.ttf) format("truetype");
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+#main {
+  position: relative;
+  overflow: hidden;
+}
+#page,
+#page1,
+#page2,
+#page3 {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  background-color: #f1f1f1;
+}
+canvas {
+  position: relative;
+  z-index: 9;
+  max-width: 100vw;
+  max-height: 100vh;
+}
+#loop {
+  display: flex;
+  position: absolute;
+  top: 30%;
+  height: 25%;
+  width: 100%;
+  font-size: 80px;
+  white-space: nowrap;
+}
+#loop > h1 > b {
+  font-weight: 1000;
+}
+#loop > h1 {
+  font-weight: 400;
+  animation-name: anim;
+  animation-duration: 22s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+#loop > h1 > span {
+  -webkit-text-stroke: 2.2px black;
+  color: transparent;
+  font-weight: 500;
+}
+@keyframes anim {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
 #nav {
   display: flex;
   align-items: center;
@@ -21,28 +80,102 @@
   font-size: 25px;
 }
 #nav > h3 > span {
-  -webkit-text-stroke: 0.8px black;
+  -webkit-text-stroke: 0.6px black;
   color: transparent;
   font-weight: 500;
 }
-#nav > button {
+
+#nav > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#nav > div > button {
   text-decoration: none;
   display: flex;
   align-items: center;
-  padding: 8px 8px;
-  border-radius: 50px;
+  padding: 10px 10px;
+  border-radius: 100px;
   background-color: #000;
   color: white;
   border: none;
   cursor: pointer;
-  font-size: 14px;
 }
-#nav > button:hover {
+#nav > div > button:hover {
   background-color: #444444;
 }
-#nav > button > img {
-  text-decoration: none;
-  margin-right: 0px;
+#nav > div > button > img {
   width: 22px;
   height: 22px;
+}
+
+#page > h3 {
+  position: absolute;
+  top: 62%;
+  font-weight: 400;
+  color: #5d5d5d;
+  left: 2%;
+}
+#page > h4 {
+  position: absolute;
+  top: 75%;
+  font-weight: 400;
+  color: #5d5d5d;
+  left: 23%;
+}
+#page1 > #right-text > h3,
+#page2 > #right-text > h3,
+#page3 > #right-text > h3 {
+  position: absolute;
+  top: 25%;
+  font-weight: 500;
+  color: #5d5d5d;
+  left: 8%;
+}
+#page1 > #right-text > h1,
+#page2 > #right-text > h1,
+#page3 > #right-text > h1 {
+  position: absolute;
+  top: 29%;
+  font-weight: 900;
+  left: 8%;
+}
+#page1 > #right-text > h1 > span,
+#page2 > #right-text > h1 > span,
+#page3 > #right-text > h1 > span,
+#page1 > #left-text > h1 > span {
+  display: inline-flex;
+  color: #f1f1f1;
+  background-color: #000;
+  margin-bottom: 10px;
+  padding: 3px 10px;
+}
+#page1 > #left-text > h1 {
+  position: absolute;
+  top: 56%;
+  font-weight: 900;
+  right: 8%;
+  text-align: end;
+}
+#page1 > #left-text > h3 {
+  position: absolute;
+  top: 78%;
+  font-weight: 500;
+  color: #5d5d5d;
+  right: 8%;
+}
+#page2 > #left-text > p,
+#page3 > #left-text > p {
+  text-align: end;
+  position: absolute;
+  font-weight: 500;
+  color: #5d5d5d;
+  right: 5%;
+}
+#page2 > #left-text > p {
+  top: 58%;
+}
+#page3 > #left-text > p {
+  top: 55%;
 }
